@@ -4,25 +4,32 @@ import profil from '../data/mock.json'
 class profilesdata extends React.Component {
     render() {
         return(
-            <View style={style.main_container}>
-                {/* <FlatList
+            <View >
+                   <FlatList style={styles.main_container}
           data={profil}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => <Text>{item.first_name}</Text>}
-        /> */}
-        <Text style={style.title_text}>Titre du profil.</Text>
-            </View>
+          renderItem={({item}) => <Text style={styles.first_name}>{item.first_name}</Text>}
+        />  
+      </View>
         )
     }
-
 }
+
 const styles = StyleSheet.create({
     main_container: {
         height: 190
     },
-    title_text: {
+    first_name: {
+        color: '#2D2D2D',
+        fontWeight: 'bold'
+    },
+    last_name: {
 
-    }
+    },
+    image : {
+
+    },
+
 })
 
 export default profilesdata

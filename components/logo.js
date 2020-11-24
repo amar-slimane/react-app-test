@@ -1,15 +1,7 @@
 import React from 'react'
-import { View, Image } from 'react-native'
-class Search extends React.Component {
-    render() {
-        return(
-            <View>
-
-            </View>
-
-            
-        )
-    }
-}
-
-export default Search
+import {Image } from 'react-native'
+const Logo_exemple =  () => (
+    <Image style ={styles.logo}source = {require('../src/logowe.png')} />
+    
+ )
+export default Logo_exemple
