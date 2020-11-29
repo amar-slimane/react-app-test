@@ -2,12 +2,14 @@ import React from 'react' // Lorsqu'on crée un component custom, il est impéra
 import { StyleSheet, View, Button,TextInput, FlatList,Text } from 'react-native' // Avant de pouvoir utiliser les component dont on a besoin, il faut les importer.
 import profil from '../data/mock.json'
 import Profilesdata from './profilesdata'
-class Search extends React.Component {
+class Search extends React.Component {    
     render() {
-        return(
+        console.log(this.props)
+        return(      
             <View>
                      {/* ici nous allons utiliser du JSX exemple : <textInput placeholder="Rechercher/> = React.createElement(TextInput, {placeholder: "Rechercher"}) */}
-                <TextInput style={styles.textinput} placeholder="Rechercher"/>
+                <TextInput style={styles.textinput} placeholder="Rechercher"
+                />
                 <Button color="#E9638B" title="search" onPress={(function(){})}/> 
              <Profilesdata/>
             </View>

@@ -2,19 +2,16 @@ import React from 'react' // Lorsqu'on crée un component custom, il est impéra
 import { StyleSheet, View, FlatList,Text, Image } from 'react-native' // Avant de pouvoir utiliser les component dont on a besoin, il faut les importer.
 import profil from '../data/mock.json'
 class profilesdata extends React.Component {
+    
     render() {
         return(
             <View >
-               
                    <FlatList style={styles.main_container}
           data={profil}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({item}) => <Text style={styles.first_name}>  <Image style={styles.logo} source={{uri:item.photo}}/>
           {item.first_name} 
-         
-            
           </Text>}
-          
         />  
       </View>
         )
@@ -23,11 +20,11 @@ class profilesdata extends React.Component {
 const styles = StyleSheet.create({
     main_container: {
         height: 190
+        
     },
     first_name: {
         color: '#2D2D2D',
         fontWeight: 'bold',
-        textAlign: 'center',
     },
     last_name: {
 
